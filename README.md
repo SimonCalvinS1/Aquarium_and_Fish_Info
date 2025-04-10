@@ -7,9 +7,11 @@ The CSS file contains styling using classes and elements, while JavaScript takes
 
 ---
 # Tech Stack
-Languages: HTML, CSS, JavaScript
-IDE: VS Code / Notepad
-Version Control: Git & GitHub
+Languages: HTML, CSS, JavaScript.
+
+IDE: VS Code / Notepad.
+
+Version Control: Git & GitHub.
 
 ---
 # Prerequisites
