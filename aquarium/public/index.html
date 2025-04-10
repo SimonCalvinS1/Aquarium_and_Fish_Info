@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="../src/css/style.css" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <head>
+    <title>Aquarium and Fish Info</title>
+    <script>
+      function validateForm(event) {
+        event.preventDefault(); //prevent from submission
+        var name = document.getElementById("name").value.trim();
+        var phone = document.getElementById("ph").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var phonePattern = /^[0-9]{10}$/; //10 digits
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; //email format
+        if (name === "") {
+          alert("Please enter your name");
+          return false;
+        }
+        if (!phone.match(phonePattern)) {
+          alert("Phone number must be numbers only and exactly 10 digits");
+          return false;
+        }
+        if (!email.match(emailPattern)) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+        alert("Form submitted successfully!");
+        document.getElementById("subscribeForm").submit(); //submit the form
+      }
+    </script>
+  </head>
+  <body>
+    <h1><center>Welcome to Aquarium and Pet Info</center></h1>
+    <div class="navbar">
+      <a href="index.html">Home Page</a>
+      <a href="fish.html">Fish Related</a>
+      <a href="aqua.html">Aquarium Related</a>
+      <a href="petcare.html">Pet Care</a>
+    </div>
+    <h2 class="hero">
+      About us: We are Aquarium and Pet Info, we provide information about
+      different types of fishes, tanks and on how to take care of them. Look at
+      our other webpages by clicking at the navigation bar. We aim to give
+      information to people through our website and we also send emails to our
+      subscribed users. There is no payment required to subscribe to us to
+      receive our mails. So please subscribe to us to receive updates on fishes
+      and aquariums.
+    </h2>
+    <br />
+    <h3>Want to get aquarium info as news updates in your email?</h3>
+    <h3>If yes, please fill out this form to get emails regularly</h3>
+    <section class="form">
+      <form id="subscribeForm" onsubmit="return validateForm(event)">
+        <div class="form-group">
+          <strong>Name:</strong>
+          <input type="text" id="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <strong>Phone:</strong>
+          <input
+            type="text"
+            id="ph"
+            placeholder="Enter 10-digit phone number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <strong>Email:</strong>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button type="submit" class="button-group">Submit</button>
+      </form>
+    </section>
+    <h2>
+      Thank you for looking into our website. Hope you enjoy your time reading
+      our webpages.
+    </h2>
+    <section class="followus">
+      <h1>Connect with us on :</h1>
+      <div class="social-links">
+        <a href="https://www.instagram.com/simon_calvin_s/" target="_blank">
+          <i class="fab fa-instagram fa-3x"></i>
+        </a>
+        <a href="https://github.com/SimonCalvinS1/" target="_blank">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/simon-calvin-s-948681340/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin fa-3x"></i>
+        </a>
+      </div>
+    </section><br>
+    <footer>
+      <p>&copy; 2025 Simon Calvin S. All rights reserved.</p>
+    </footer>
+    <br />
+  </body>
+</html>
